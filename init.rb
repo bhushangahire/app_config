@@ -1,4 +1,3 @@
 require 'app_config'
 
-::AppConfig = ApplicationConfiguration.new(RAILS_ROOT+"/config/app_config.yml",
-                                           RAILS_ROOT+"/config/environments/#{RAILS_ENV}.yml")
+::AppConfig = ApplicationConfiguration.new(Rails.root.join("config", "app_config.yml"), Rails.root.join("config", "environments", "#{RAILS_ENV}.yml"))
